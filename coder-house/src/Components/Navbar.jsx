@@ -1,9 +1,11 @@
+import Button from "./Button"
+
 export default function Navbar() {
 
  return <>
-   <button text = 'Inicio'/>
-   <button text = 'Contacto'/>
-   <button text = 'Ofertas'/>
+   <Button text = 'Inicio'/>
+   <Button text = 'Contacto'/>
+   <Button text = 'Ofertas'/>
  </>;
 
 }

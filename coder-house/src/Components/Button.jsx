@@ -6,4 +6,4 @@ function Button (props) {
     )
 } 
 
-export {Button}
+export default Button
