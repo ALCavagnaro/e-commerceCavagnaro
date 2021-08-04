@@ -1,4 +1,5 @@
 import Button from "./Button"
+import CarWidget from "./CarWidget"
 
 export default function Navbar() {
 
@@ -6,6 +7,7 @@ export default function Navbar() {
    <Button text = 'Inicio'/>
    <Button text = 'Contacto'/>
    <Button text = 'Ofertas'/>
+   <CarWidget/>
  </>;
 
 }
