@@ -1,4 +1,4 @@
-import Logo from './carrito-de-compras.png';
+import Logo from '../Statics/Images/carrito-de-compras.png';
 
 function CarWidget (props) { 
     return (
