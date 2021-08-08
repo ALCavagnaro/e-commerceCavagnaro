@@ -4,10 +4,12 @@ import CarWidget from "./CarWidget"
 export default function Navbar() {
 
  return <>
+   <div className = "NavBarContainer">
    <Button text = 'Inicio'/>
    <Button text = 'Contacto'/>
    <Button text = 'Ofertas'/>
-   <CarWidget/>
+   <CarWidget className = 'CarWidget'/>
+   </div>
  </>;
 
 }

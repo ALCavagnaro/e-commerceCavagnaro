@@ -1,5 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.NavBarContainer{
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 Button {
-  background-color: aquamarine;
+  background-color: black;
   padding: 0.2rem;
+  margin: 5px;
+  color: white;
+  border: white solid 2px;
+  width: 5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.CarWidget, .Logo {
+  width: 3rem; 
+  height: 3rem; 
+  margin: auto 5% auto 75%;
+  cursor: pointer;
+}
+
+.Photo{
+  width: 50%;
+  height: 30rem;
+  margin: auto;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.SetCountContainer {  
+  margin: 5rem 5%;
+  padding: auto;
+  display: flex;
+  flex-direction: column; 
+}
+
+.SetCountButtonContainer{
+  display: flex;
+  flex-direction: row;
+  margin: 2% auto;
+}
+
+.SetCountButton {
+  margin: 5%;
+}
+
+.SetCountSubtitle {
+  font-size: 20px;
+  margin: 1% auto;
+
+}
+
+.BuyButton {
+  margin: 2% auto;
+  width: 10rem;
 }
 

@@ -1,35 +1,47 @@
 import { useEffect, useState } from "react";
+import Pullover from '../Statics/Images/fashion-1283863_1920.jpg'
 
-function Stock () {
+function ItemCount ({stock}) {
 
-    let [ItemStock, setStock] = useState(5);
+    let [ItemStock, setStock] = useState(0);
 
-}
+    let [count, setCount] = useState(1);
 
-function ItemCount (stock, initial,  onAdd) {
-    let [count, setCount] = useState(0);
-    useEffect(() => {
-        console.log('UseEffect()')
-        console.log(stock)
-    }, [count, stock])
+    useEffect (() => {
+        setStock(stock);
+    }, [ItemStock,stock])
+
+    console.log(ItemStock,stock);
+
+    const add = () => {
+        if(count<ItemStock) {
+            setCount(count+1)
+        }
+    }
+
+    const sub = () => {
+        if(count>1){
+            setCount(count-1)
+        }
+    }
+
 
     return (
-      <>
-      <button onClick={() => setCount(count+1)}>+</button>
-      <button onClick={() => setCount(count-1)}>-</button>
-      <div>{count}</div>
-      </>
-    )
-}
+        <>
+        <div className = 'SetCountContainer'>
+        <img src={Pullover} className = 'Photo' alt="Pullover"/>
+        <div className = 'SetCountButtonContainer'>
+        <button className = 'SetCountButton' onClick={() => add(count+1)}>+</button>
+        <button className = 'SetCountButton'onClick={() => sub(count-1)}>-</button>
+        </div>
+        <div className = 'SetCountSubtitle'>Unidades seleccionadas <strong>{count}</strong></div>
+        <div className = 'SetCountSubtitle'>Stock disponible <strong>{ItemStock-count}</strong></div>
+        <button className = 'BuyButton'>Agregar al carrito</button>
+        </div>
+        </>
+      )
 
-/*  <ItemCount stock='5' initial='1' />*/
+    }
 
-export default ItemCount; 
+export default ItemCount;
 
-/*const [time, setTime] = useState(0)
-
-useEffect(() => {
-    setInterval(() => {
-        setTime(prevTime => prevTime+1)
-    }, 1000)
-}, [])*/ 

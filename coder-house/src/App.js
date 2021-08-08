@@ -8,8 +8,8 @@ function App() {
   return (
     <>
      <Navbar/>
-     <ItemListContainer greetings = "Aprovechá la oferta de remeras. Sólo quedan 5 en stock"/>
-     <ItemCount/>
+     <ItemListContainer className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
+     <ItemCount stock='5'/>
     </>
   );
 }
