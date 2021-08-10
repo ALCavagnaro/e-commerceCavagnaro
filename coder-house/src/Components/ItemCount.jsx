@@ -29,14 +29,14 @@ function ItemCount ({stock}) {
     return (
         <>
         <div className = 'SetCountContainer'>
-        <img src={Pullover} className = 'Photo' alt="Pullover"/>
+        <img src={Pullover} className = 'MainPhoto' alt="Pullover"/>
         <div className = 'SetCountButtonContainer'>
         <button className = 'SetCountButton' onClick={() => add(count+1)}>+</button>
         <button className = 'SetCountButton'onClick={() => sub(count-1)}>-</button>
         </div>
         <div className = 'SetCountSubtitle'>Unidades seleccionadas <strong>{count}</strong></div>
         <div className = 'SetCountSubtitle'>Stock disponible <strong>{ItemStock-count}</strong></div>
-        <button className = 'BuyButton'>Agregar al carrito</button>
+        <button className = 'BuyButtonMain'>Agregar al carrito</button>
         </div>
         </>
       )

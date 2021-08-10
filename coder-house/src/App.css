@@ -33,11 +33,12 @@ Button {
   cursor: pointer;
 }
 
-.Photo{
+.MainPhoto{
   width: 50%;
   height: 30rem;
   margin: auto;
 }
+
 
 h1 {
   color: black;
@@ -59,7 +60,7 @@ h1 {
 }
 
 .SetCountButton {
-  margin: 5%;
+  margin: 3%;
 }
 
 .SetCountSubtitle {
@@ -68,8 +69,44 @@ h1 {
 
 }
 
-.BuyButton {
-  margin: 2% auto;
+.BuyButtonMain {
+  margin: 1% auto;
   width: 10rem;
 }
 
+.BuyButton {
+  margin: 1% auto;
+  width: 100%;
+}
+
+.Photo{
+  width: 100%;
+  height: 15rem;
+  }
+  
+  .name, .price {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  }
+
+  .price::before{
+    content: "$";
+    margin-right: 1%;
+  }
+  
+  .card{
+  width: 40rem;
+   margin: 1%;
+   cursor:pointer;
+  }
+
+  .PhotoGallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5%;
+  }
