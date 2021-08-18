@@ -1,12 +1,12 @@
 import React from 'react';
-import Data from './Data.jsx'
+import data from './Data.jsx'
 import Item from './Item.jsx'
 
 
 function ItemListContainer () {
 
-  const ItemList = Data.map( Item =>  (
-    <Item key={Item.id} name={Item.name} photo={Item.photo}/>
+  const ItemList = data.map( item =>  (
+    <Item name={item.name} photo={item.photo} categoria={item.Categoría} id={item.id}/>
   ));
 
   return (
