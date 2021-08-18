@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Pullover from '../Statics/Images/fashion-1283863_1920.jpg'
+//import Pullover from '../Statics/Images/fashion-1283863_1920.jpg'
 
 function ItemCount ({stock}) {
 
     let [ItemStock, setStock] = useState(0);
 
-    let [count, setCount] = useState(1);
+    let [count, setCount] = useState(0);
 
     useEffect (() => {
         setStock(stock);
@@ -29,7 +29,6 @@ function ItemCount ({stock}) {
     return (
         <>
         <div className = 'SetCountContainer'>
-        <img src={Pullover} className = 'MainPhoto' alt="Pullover"/>
         <div className = 'SetCountButtonContainer'>
         <button className = 'SetCountButton' onClick={() => add(count+1)}>+</button>
         <button className = 'SetCountButton'onClick={() => sub(count-1)}>-</button>

@@ -3,16 +3,30 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import Greetings from './Components/Greetings';
 import ItemListContainer from './Components/ItemListContainer';
-import ItemCount from "./Components/ItemCount";
+import ItemDetailContainer from './Components/ItemDetailContainer';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <>
-     <Navbar/>
-     <Greetings className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
-     <ItemCount stock='5'/>
-     <ItemListContainer/>
-    </>
+    <BrowserRouter>
+      <>
+      <Navbar/>
+      <Greetings className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
+      <Switch>
+          <Route path="/" exact>
+            <ItemListContainer/>
+          </Route>
+          <Route path="/:categoria/:id" exact>
+            <ItemDetailContainer />
+          </Route>
+        </Switch>
+      </>
+    </BrowserRouter>
   );
 }
 

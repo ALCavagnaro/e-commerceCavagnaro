@@ -1,35 +1,35 @@
-// // mock
-// const ItemsStock = [
-//     {
-//       id: '',
-//       isValid: true,
-//       name: ''
-//     }
-//   ];
-  
-//   // simulación de api call
-//   const getItem = (id = null) => {
-//     console.log('waiting for response...');
-//     return new Promise((resolve, reject) => {
-//       setTimeout(() => {
-//         const ItemStock = ItemsStock.find(ItemStock => ItemStock.id === id);
-       
-//         if (ItemStock != null) resolve(ItemStock);
 
-//         reject({
-//           status: 404
-//         });
-//       }, 2000);
-//     });
-//   };
+import data from './Data.jsx'
+import Item from './Item.jsx'
+import React, {useState, useEffect} from 'react'
+import { useParams } from 'react-router-dom'
+
+  const getItems = (id = null) => {
+    console.log('waiting for response...');
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const data = data.find(data => data.id === id);
+       
+        if (data != null) resolve(data);
+
+        reject({
+          status: 404
+        });
+      }, 2000);
+    });
+  };
   
-//   const myPromise = new Promise(async (resolve, reject) => {
-//     const ItemStock = await getItem('').catch(
-//       err => reject(err)
-//     );
+  const myPromise = new Promise(async (resolve, reject) => {
+    const data = await getItems('').catch(
+      err => reject(err)
+    );
     
-//     ItemStock?.isValid ? resolve(ItemStock) : reject('not ItemStock');
-//   });
+    data?.isValid ? resolve(data) : reject('not ItemStock');
+  });
   
-//   myPromise.then(result => console.log(result)).catch(err => console.log(err));
+  myPromise.then(result => console.log(result)).catch(err => console.log(err));
+
+
+
+
   

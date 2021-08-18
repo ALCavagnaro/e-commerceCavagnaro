@@ -1,16 +1,19 @@
-import React from 'react';
+import ItemCount from './ItemCount.jsx'
 
-export default function ItemDetail({ key='', name = '', description='', price= 0, thumbnail = '' }) {
+
+const ItemDetail =  ({ id='', name = '', description='', price= 0, thumbnail = '' , stock = ''}) => {
   return (
     <div className="card">
-        <div className="id">{key}</div>
         <img className="Photo" src= {thumbnail} alt={thumbnail}/>
         <div className="name">{name}</div>
-        <div className="price">{price}</div>
+        <div className="price">$ {price}</div>
         <div>{description}</div>
+        <ItemCount stock={stock} />
         <button className = 'BuyButton'>Agregar al carrito</button>
     </div>
   );
 }
+
+export default ItemDetail
 
 
