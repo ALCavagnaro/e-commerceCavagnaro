@@ -7,8 +7,8 @@ export default function Navbar() {
  return <>
    <div className = "NavBarContainer">
    <Link to="/"><Button text = 'Inicio'/></Link>
-   <Link to="/"><Button text = 'Contacto'/></Link>
-   <Link to="/"><Button text = 'Ofertas'/></Link>
+   <Link to="/Mujer"><Button text = 'Mujer'/></Link>
+   <Link to="/Hombre"><Button text = 'Hombre'/></Link>
    <Link to="/"><CarWidget className = 'CarWidget'/></Link>
    </div>
  </>;

@@ -4,36 +4,36 @@
           id: "1" ,
           name: "Bufanda",
           price: "500",
-          photo:'/Images/bufanda.jpg',
+          photo:'/Statics/Images/bufanda.jpg',
           stock: "3",
-          Categoría: "Mujer",
+          category: "Mujer",
         },
     
         {
           id: "2",
           name: "Campera",
           price: "1000",
-          photo: '/Images/campera.jpg',
+          photo: '/Statics/Images/campera.jpg',
           stock: "4",
-          Categoría: "Hombre",
+          category: "Hombre",
         },
     
         {
           id: "3",
           name: "Jeans",
           price: "850",
-          photo: '/Images/jeans.jpg',
+          photo: '/Statics/Images/jeans.jpg',
           stock: "4",
-          Categoría: "Hombre",
+          category: "Hombre",
         },
     
         {
           id: "4",
           name: "Vestido",
           price: "690",
-          photo: '/Images/vestido.jpg',
+          photo: '/Statics/Images/vestido.jpg',
           stock: "1",
-          Categoría: "Mujer",
+          category: "Mujer",
 
         },
       ];

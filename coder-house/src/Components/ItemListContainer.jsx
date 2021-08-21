@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import data from './Data.jsx'
+import data from './Data.js'
 import Item from './Item.jsx'
 import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer = () => {
 
-  const { categoria } =useParams()
-    const [productos, setProductos] = useState([])
-    const [cargando, setCargando] = useState(true)
+  const { category } = useParams()
+    const [products, setProductos] = useState([])
+    const [charge, setCargando] = useState(true)
 
     useEffect(()=>{
-        const productos = () => {
+        const products = () => {
             return new Promise((resolve, reject)=>{
                 setTimeout(()=>{
                     resolve(data)
@@ -19,24 +19,24 @@ const ItemListContainer = () => {
                 },2000)
             })
         }
-        productos().then((items)=>{
-            if(categoria != null){
-                const productosFiltrados=items.filter((producto)=>producto.categoria===categoria)
-                setProductos(productosFiltrados)
+        products().then((items)=>{
+            if(category != null){
+                const productsFiltered=items.filter((product)=>product.category===category)
+                setProductos(productsFiltered)
                 setCargando(false)
             } else {
                 setProductos(items)
                 setCargando(false)
             }
+            
         })
-    },[categoria])
-
-
+    },[category])
+     
     return(
         <>
-        {cargando ? <h2>CARGANDO PRODUCTOS...</h2> : 
-        productos.map((producto)=>
-            <Item key={producto.id} nombre={producto.name} precio={producto.price} stock={producto.stock} categoria={producto.categoria} id={producto.id} imagen={producto.photo}/>
+        {charge ? <h2>CARGANDO PRODUCTOS...</h2> : 
+        products.map((product)=>
+            <Item key={product.id} name={product.name} price={product.price} stock={product.stock} category={product.category} id={product.id} photo={product.photo}/>
         )
         }
         </>

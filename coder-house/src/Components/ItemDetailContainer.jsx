@@ -1,29 +1,29 @@
 import React, {useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
-import data from './Data.jsx'
+import data from './Data.js'
 import { useParams } from 'react-router-dom'
 
 
 
 const ItemDetailContainer = ()=>{
 
-  const [producto, setProducto] = useState([])
+  const [product, setProduct] = useState([])
 
 
   const {id} = useParams()
 
 
   useEffect(()=>{
-      const productos = () => {
+      const products = () => {
           return new Promise((resolve, reject)=>{
               setTimeout(()=>{
                   resolve(data)
               },2000)
           })
       }
-      productos().then((items)=>{
-          const producto = items.find(producto => producto.id === id)
-          setProducto(producto)
+      products().then((items)=>{
+          const product = items.find(product => product.id === "1")
+          setProduct(product)
           
       })
   },[])
@@ -31,7 +31,7 @@ const ItemDetailContainer = ()=>{
 
   return(
       <>
-          <ItemDetail name={producto.name} price={producto.price} stock={producto.stock} thumbnail={producto.thumbnail} />
+          <ItemDetail name={product.name} price={product.price} stock={product.stock} thumbnail={product.thumbnail} photo={product.photo} category={product.category}/>
       </>
 
   )
