@@ -7,8 +7,8 @@ import ItemDetailContainer from './Components/ItemDetailContainer';
 import {
   BrowserRouter,
   Switch,
-  Route,
-  Link
+  Route
+
 } from "react-router-dom";
 
 function App() {
