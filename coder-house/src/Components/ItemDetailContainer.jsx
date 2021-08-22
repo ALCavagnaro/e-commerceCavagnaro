@@ -22,7 +22,7 @@ const ItemDetailContainer = ()=>{
           })
       }
       products().then((items)=>{
-          const product = items.find(product => product.id === "1")
+          const product = items.find(product => product.id === id)
           setProduct(product)
           
       })
