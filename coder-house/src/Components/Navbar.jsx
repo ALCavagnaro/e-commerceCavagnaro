@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Button from "./Button"
-import CarWidget from "./CarWidget"
+import CarWidget from "./CarWidget.jsx"
 
 export default function Navbar() {
 

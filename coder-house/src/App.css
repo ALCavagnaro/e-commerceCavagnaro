@@ -74,14 +74,11 @@ h1 {
 }
 
 .BuyButtonMain {
-  margin: 1% auto 15rem auto;
-  width: 10rem;
-}
-
-/*.BuyButton {
-  margin: 1% auto;
+  margin: 1% auto 1rem auto;
   width: 100%;
-}*/
+  height: 3rem;
+  font-size: large;
+}
 
 .Photo{
   width: 100%;

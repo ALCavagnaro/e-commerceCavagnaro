@@ -8,7 +8,7 @@ const ItemDetail =  ({ id='', name = '', description='', price= 0, thumbnail = '
         <div className="name">{name}</div>
         <div className="price">{price}</div>
         <div>{description}</div>
-        <ItemCount stock={stock} />
+        <ItemCount stock={stock} onAdd = {() => console.log('Agrego al carrito')}/>
     </div>
   );
 }
