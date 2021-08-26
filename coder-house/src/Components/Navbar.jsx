@@ -9,7 +9,7 @@ export default function Navbar() {
    <Link to="/"><Button text = 'Inicio'/></Link>
    <Link to="/Mujer"><Button text = 'Mujer'/></Link>
    <Link to="/Hombre"><Button text = 'Hombre'/></Link>
-   <Link to="/"><CarWidget className = 'CarWidget'/></Link>
+   <Link to="/Cart"><CarWidget className = 'CarWidget'/></Link>
    </div>
  </>;
 

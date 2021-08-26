@@ -85,6 +85,9 @@ h1 {
   height: 80%;
   border-radius: 5px;
   }
+  a{
+    text-decoration: none;
+  }
   
   .name, .price {
   font-weight: 500;

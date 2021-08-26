@@ -4,6 +4,9 @@ import Navbar from './Components/Navbar';
 import Greetings from './Components/Greetings';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
+import CacheProvider from './Components/Context/CacheProvider';
+import Cart from './Components/Cart';
+
 import {
   BrowserRouter,
   Switch,
@@ -11,10 +14,12 @@ import {
 
 } from "react-router-dom";
 
+
 function App() {
   return (
     <BrowserRouter>
       <>
+      <CacheProvider>
       <Navbar/>
       <Greetings className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
       <Switch>
@@ -27,8 +32,10 @@ function App() {
           <Route path="/:category" exact>
             <ItemListContainer/>
           </Route>
-        </Switch>
-      </>
+      </Switch>
+      <Cart/>
+      </CacheProvider>
+        </>
     </BrowserRouter>
   );
 }

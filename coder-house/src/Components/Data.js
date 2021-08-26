@@ -7,6 +7,7 @@
           photo:'/Statics/Images/bufanda.jpg',
           stock: "3",
           category: "Mujer",
+          inCart: false,
         },
     
         {
@@ -16,6 +17,7 @@
           photo: '/Statics/Images/campera.jpg',
           stock: "4",
           category: "Hombre",
+          inCart: false,
         },
     
         {
@@ -25,6 +27,7 @@
           photo: '/Statics/Images/jeans.jpg',
           stock: "4",
           category: "Hombre",
+          inCart: false,
         },
     
         {
@@ -34,7 +37,7 @@
           photo: '/Statics/Images/vestido.jpg',
           stock: "1",
           category: "Mujer",
-
+          inCart: false,
         },
 
         {
@@ -44,7 +47,7 @@
           photo: '/Statics/Images/camperaJean.jpg',
           stock: "8",
           category: "Mujer",
-
+          inCart: false,
         },
 
         {
@@ -54,7 +57,7 @@
           photo: '/Statics/Images/gafas.jpg',
           stock: "2",
           category: "Mujer",
-
+          inCart: false,
         },
 
         {
@@ -64,7 +67,7 @@
           photo: '/Statics/Images/remera.jpg',
           stock: "12",
           category: "Mujer",
-
+          inCart: false,
         },
 
         {
@@ -74,7 +77,7 @@
           photo: '/Statics/Images/traje.jpg',
           stock: "6",
           category: "Hombre",
-
+          inCart: false,
         },
       ];
 
