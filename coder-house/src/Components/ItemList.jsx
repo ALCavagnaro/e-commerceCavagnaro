@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 const ItemList = () => {
 
   const { category } = useParams()
-    const [products, setProductos] = useState([])
+    const [products, setProducts] = useState([])
     const [charge, setCargando] = useState(true)
 
     useEffect(()=>{
@@ -22,10 +22,10 @@ const ItemList = () => {
         products().then((items)=>{
             if(category != null){
                 const productsFiltered=items.filter((product)=>product.category===category)
-                setProductos(productsFiltered)
+                setProducts(productsFiltered)
                 setCargando(false)
             } else {
-                setProductos(items)
+                setProducts(items)
                 setCargando(false)
             }
             
@@ -39,6 +39,7 @@ const ItemList = () => {
            <Item key={product.id} name={product.name} price={product.price} stock={product.stock} category={product.category} id={product.id} photo={product.photo}/>
         )
         }
+        {console.log(products)}
         </>
 
     )

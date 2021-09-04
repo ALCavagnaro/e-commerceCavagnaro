@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom"
+//import { Link } from "react-router-dom"
 
 function ItemCount ({stock, onAdd = () => {}}) {
 
@@ -7,7 +7,7 @@ function ItemCount ({stock, onAdd = () => {}}) {
 
     let [count, setCount] = useState(0);
 
-    const [addedItem, setAddedItem] = useState(false)
+    //const [addedItem, setAddedItem] = useState(false)
 
     useEffect (() => {
         setStock(stock);
@@ -30,7 +30,9 @@ function ItemCount ({stock, onAdd = () => {}}) {
     const handleOnAddBuy = (event) => {
        if (count>0) {
            onAdd(event)
-           setAddedItem(true)
+           //setAddedItem(true)
+           console.log(event)
+
        }
        
        else {
@@ -49,7 +51,7 @@ function ItemCount ({stock, onAdd = () => {}}) {
         <div className = 'SetCountSubtitle'>Unidades seleccionadas <strong>{count}</strong></div>
         <div className = 'SetCountSubtitle'>Stock disponible <strong>{ItemStock-count}</strong></div>
         <button className = 'BuyButtonMain' onClick={handleOnAddBuy}>Agregar al carrito</button>
-        <Link to="/cart">{addedItem && <button className = 'BuyButtonMain'>Finalizar tu compra</button>}</Link>
+        {/*<Link to="/cart">{addedItem && <button className = 'BuyButtonMain'>Finalizar tu compra</button>}</Link>*/}
         </div>
         </>
       )

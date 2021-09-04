@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar';
 import Greetings from './Components/Greetings';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
-import CacheProvider from './Components/Context/CacheProvider';
+import {CartState} from './Components/Context/CacheProvider';
 import Cart from './Components/Cart';
 
 import {
@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <>
-      <CacheProvider>
+      <CartState>
       <Navbar/>
       <Greetings className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
       <Switch>
@@ -34,7 +34,7 @@ function App() {
           </Route>
       </Switch>
       <Cart/>
-      </CacheProvider>
+      </CartState>
         </>
     </BrowserRouter>
   );

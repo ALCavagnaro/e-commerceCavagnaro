@@ -1,65 +1,41 @@
-import React, {useContext} from 'react'
-import {useState} from 'react'
-
+import React, {useState} from 'react'
 
 const CartContext = React.createContext()
 
-export default function CacheProvider ({defaultValue = [], children}) {
-    const [cache, setCache] = useState (defaultValue);
+const CartState = ({children}) => {
 
-    function getFromCache(id) {
-        return cache.find(obj => obj.id === id )
-    }
+    const [cart, setCart] = useState([])
 
-    function isInCache(id) {
-        return id === undefined ? undefined : getFromCache !== undefined
-    }
+    const [Item, setItems] = useState(0)
 
-    function addToCache(obj) {
-        if (isInCache (obj && obj.id)) {
-            console.log('prueba')
-            return;
+    const [Total, setTotal] = useState(0)
+
+    const onAdd = ({quantity, product}) => {
+     
+    const isInCart = cart.find(item => item.id === product.id)
+
+        if (!isInCart){
+            setCart([...cart, {id:product.id, name:product.name, price:product.price, subtotal: (product.price*quantity), quantity:quantity}])
+            console.log(product, quantity)
+            setItems(Item+1)
+            setTotal(Total+(product.price*quantity))
+            
         }
 
-        setCache ([...cache, obj]);
+    
+
     }
 
-    return <CartContext.Provider value = {{cache, addToCache, isInCache, cacheSize: cache.lenght}}>
+
+    return <CartContext.Provider value = {{onAdd, cart, Item, Total}}>
 
         {children}
 
            </CartContext.Provider>
 }
 
-
-// const Context = React.createContext({Item}, {Quantity}) 
-
-// export default function CartContext ({children}) {
-
-//     const [Item, setItem] = useState ([])
-//     const [Quantity, setQuantity] = useState = (0)
-
-//     const toggleTheme = ({data}) => {
-
-//      const inCart = () => {
-//          setItem({
-//              ...data,
-//              inCart:true
-//          });
-//          console.log(data)
-//      }
+export {CartState, CartContext}
 
 
-//     }
 
-//     return (
-//         <>
-     
-//          <CartContext.Provider value ={{valor:[]}}>
-//              <ItemDetail/>
-//          </CartContext.Provider>
-
-//         </>
-//     )
-// }
 
