@@ -4,7 +4,6 @@ import data from './Data.js'
 import { useParams } from 'react-router-dom'
 
 
-
 const ItemDetailContainer = ()=>{
 
   const [product, setProduct] = useState([])
