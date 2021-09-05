@@ -20,20 +20,22 @@ function App() {
     <BrowserRouter>
       <>
       <CartState>
-      <Navbar/>
-      <Greetings className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
-      <Switch>
-          <Route path="/" exact>
-            <ItemListContainer/>
-          </Route>
-          <Route path="/:category/:id" exact>
-            <ItemDetailContainer />
-          </Route>
-          <Route path="/:category" exact>
-            <ItemListContainer/>
-          </Route>
-      </Switch>
-      <Cart/>
+        <Navbar/>
+        <Greetings className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
+        <Switch>
+            <Route path="/" exact>
+              <ItemListContainer/>
+            </Route>
+            <Route path="/:category/:id" exact>
+              <ItemDetailContainer />
+            </Route>
+            <Route path="/:category" exact>
+              <ItemListContainer/>
+            </Route>
+            <Route path="/cart" exact>
+              <Cart/>
+            </Route> 
+        </Switch>
       </CartState>
         </>
     </BrowserRouter>
