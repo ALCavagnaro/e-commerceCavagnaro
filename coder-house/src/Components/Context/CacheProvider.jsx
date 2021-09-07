@@ -48,7 +48,7 @@ const CartState = ({children}) => {
 
     }  /*Acá termina*/
 
-    const remove = (quantity, id, price) => {
+    const remove = (id, price, quantity) => {
         const removeItem = cart.filter((item)=> item.id !== id)
         setCart(removeItem)
         setTotal(total-(quantity*price))
