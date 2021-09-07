@@ -14,8 +14,6 @@ const CartState = ({children}) => {
 
     const isInCart = cart.find(item => item.id === product.id)
 
-    console.log(cart.length)
-
         if (!isInCart){
             setCart([...cart, {
 
