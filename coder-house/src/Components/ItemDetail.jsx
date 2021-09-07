@@ -5,23 +5,17 @@ import { Link } from "react-router-dom"
 
 const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = '' , stock = '', photo = ''}) => {
   
-    const {onAdd, count} = useContext(CartContext)
-    const [addedItem, setAddedItem] = useState(false)
-    const [itemCount, setItemCount] = useState(count)
-    console.log('itemdetail', count, itemCount)
+    const {onAdd} = useContext(CartContext)
+    
+    let [itemUnit, setItemUnit] = useState(0)
 
-    const add = (props, event, addBtn) => {  
 
-      onAdd({id , name, price}, itemCount)
-      setAddedItem(true)
+    const add = (count) => {
 
-      if (count>0) {
-          addBtn(event)
-      }
+      setItemUnit(count)
+       
+      onAdd({id , name, price}, itemUnit)
       
-      // else {
-      //     alert("Seleccionar producto")
-      // }
     }
 
   return (
@@ -30,10 +24,9 @@ const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = ''
         <div className="name">{name}</div>
         <div className="price">{price}</div>
         <div>{description}</div>
-        <ItemCount stock={stock}/>
+        <ItemCount stock={stock} onAdd={add}/>
         <div className='buttonContainer'>
-          <button onClick={add}>Agregar al carrito</button>
-          <Link to="/Cart">{addedItem && <button onClick={()=>{add()}}>Finalizar tu compra</button>}</Link>
+        <Link to="/Cart"><button onClick={()=>{add()}}>Finalizar tu compra</button></Link>
         </div>
     </div>
   );

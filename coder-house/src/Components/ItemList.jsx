@@ -24,7 +24,7 @@ const ItemList = () => {
                         stock: item.data().stock, 
                         category: item.data().category})
                 })
-                console.log('itemsAux',itemsAux)
+                
                  setProducts(itemsAux)
                  setCargando(false)
 
@@ -68,7 +68,7 @@ const ItemList = () => {
            />
         )
         }
-        {console.log(products)} 
+         
         </>
 
     )

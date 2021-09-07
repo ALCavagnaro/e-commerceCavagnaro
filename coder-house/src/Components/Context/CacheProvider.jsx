@@ -11,7 +11,6 @@ const CartState = ({children}) => {
     const [total, setTotal] = useState(0)
 
     const onAdd = (product, quantity) => {   /*acá empieza*/
-    console.log(quantity) 
 
     const isInCart = cart.find(item => item.id === product.id)
 
@@ -24,12 +23,12 @@ const CartState = ({children}) => {
                 id:product.id, 
                 name:product.name, 
                 price:product.price, 
-                subtotal: (product.price*quantity), 
-                quantity:quantity
+                quantity:quantity,
+                subtotal: (product.price*quantity)
             }])
-
             setUnit(unit+1)
             setTotal(total+(product.price*quantity))
+            
 
         }
 

@@ -15,35 +15,36 @@ const Cart = () => {
         return(
 
             <>
+            <div className ='PhotoGallery'>   
 
-                {cart.map((item, key)=>
+                {cart.map((item, key) =>
                 
-                <>
-                <div className='card'>
-                    {key=item.id}
-                    <h2>{item.name}</h2>
-                    <h3>Precio producto $ {item.price}</h3>
-                    <h3>Cantidad {item.quantity}</h3>
-                    <h3>Subtotal ítem $ {item.subtotal}</h3>
-                    <button className = 'BuyButtonMain' onClick={()=>remove(
-                        
-                        item.id, 
-                        item.price, 
-                        item.quantity
-                        
-                        )}>Quitar producto</button>
-
-                        {console.log('cart', cart)}
-                </div>
-                </>
-
+                
+                    <div className='card'>
+                        <strong>{item.name}</strong>
+                        <h3>Precio producto $ {item.price}</h3>
+                        <h3>Cantidad {item.quantity}</h3>
+                        <h3>Subtotal ítem $ {item.subtotal}</h3>
+                        <button className = 'BuyButtonMain' onClick={()=>remove(
+                            
+                            item.id, 
+                            item.price, 
+                            item.quantity
+                            
+                            )}>Quitar producto</button>
+                
+                    </div>
                 
                 )}
 
-                <div className='card'>
+            </div>
 
-                    <h3>Total $ {total}</h3>
-                    <button className = 'BuyButtonMain' onClick={() => clear()}>Vaciar carrito</button>
+                <div className ='cartContainer'>
+
+                    <button className = 'BuyButtonMain' id='emptyCartBtn' onClick={() => clear()}>Vaciar carrito</button>
+
+                    <strong>Total</strong> <h3>${total}</h3>
+                
                 </div>    
 
             </>

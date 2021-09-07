@@ -14,7 +14,6 @@ const ItemDetailContainer = ()=>{
 
 useEffect(()=>{
     const item = itemId(id)
-    console.log('const firebase',itemId(id))
     item.then((data)=>{
         setProduct({
             
