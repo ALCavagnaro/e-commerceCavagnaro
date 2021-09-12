@@ -6,6 +6,7 @@ import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import {CartState} from './Components/Context/CacheProvider';
 import Cart from './Components/Cart';
+import Payment from './Components/Payment';
 
 import {
   BrowserRouter,
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/cart" exact>
               <Cart/>
+            </Route>
+            <Route path="/Payment" exact>
+              <Payment/>
             </Route>
             <Route path="/:category/:id" exact>
               <ItemDetailContainer />

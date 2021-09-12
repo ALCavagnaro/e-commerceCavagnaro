@@ -1,7 +1,18 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
-import {collection, getDocs, getDoc, query, where, doc} from "firebase/firestore";
+import {
+    collection,
+    setDoc,
+    addDoc, 
+    getDocs, 
+    getDoc, 
+    query, 
+    where, 
+    doc,
+    runTransaction,
+    writeBach
+} from "firebase/firestore";
  
 
 // Your web app's Firebase configuration
@@ -35,6 +46,16 @@ export const itemId = (id) => {
     const q2 = getDoc(q)
     return q2
 }
+
+export  const addPaymentOrder = (path, obj) => {
+
+    const pathSegments = path.split('/');
+    const ref = collection(db,...pathSegments);
+    console.log(path)
+    return addDoc(ref, obj);    
+}
+
+
 
 
 

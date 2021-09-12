@@ -1,4 +1,5 @@
-import React, {useContext} from 'react'
+import React, {useContext} from 'react';
+import { Link } from "react-router-dom";
 import {CartContext} from './Context/CacheProvider';
 
 const Cart = () => {
@@ -15,16 +16,16 @@ const Cart = () => {
         return(
 
             <>
-            <div className ='PhotoGallery'>   
+            <div className ='cartGallery'>   
 
                 {cart.map((item, key) =>
                 
                 
-                    <div className='card'>
+                    <div className='cartCard'>
                         <strong>{item.name}</strong>
-                        <h3>Precio producto $ {item.price}</h3>
-                        <h3>Cantidad {item.quantity}</h3>
-                        <h3>Subtotal ítem $ {item.subtotal}</h3>
+                        <h3>Precio producto <strong>$ {item.price}</strong></h3>
+                        <h3>Cantidad <strong>{item.quantity}</strong></h3>
+                        <h3>Subtotal ítem <strong>$ {item.subtotal}</strong></h3>
                         <button className = 'BuyButtonMain' onClick={()=>remove(
                             
                             item.id, 
@@ -41,9 +42,10 @@ const Cart = () => {
 
                 <div className ='cartContainer'>
 
-                    <button className = 'BuyButtonMain' id='emptyCartBtn' onClick={() => clear()}>Vaciar carrito</button>
+                    <button className = 'BuyButtonMain' id='emptyCartBtn' onClick={() => clear()}>Vaciar carrito</button> 
+                    <Link to ='/Payment'><button className = 'BuyButtonMain' id='emptyCartBtn'>Comprar</button></Link>
 
-                    <strong>Total</strong> <h3>${total}</h3>
+                    <h3>Total <strong>${total}</strong></h3>    
                 
                 </div>    
 
@@ -51,6 +53,8 @@ const Cart = () => {
 
         )
     }
+
+
 
 };
 

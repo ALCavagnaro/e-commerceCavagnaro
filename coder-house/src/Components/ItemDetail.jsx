@@ -9,12 +9,16 @@ const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = ''
     
     let [itemUnit, setItemUnit] = useState(0)
 
+    let [goToCart, setGoToCart] = useState(false)
+
 
     const add = (count) => {
 
       setItemUnit(count)
        
       onAdd({id , name, price}, itemUnit)
+
+      setGoToCart(true)
       
     }
 
@@ -26,7 +30,7 @@ const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = ''
         <div>{description}</div>
         <ItemCount stock={stock} onAdd={add}/>
         <div className='buttonContainer'>
-        <Link to="/Cart"><button onClick={()=>{add()}}>Finalizar tu compra</button></Link>
+        {goToCart ? <Link to="/Cart"><button onClick={()=>{add()}}>Ir al carrito</button></Link> : <div></div>}
         </div>
     </div>
   );

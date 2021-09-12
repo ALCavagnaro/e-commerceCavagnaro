@@ -1,11 +1,12 @@
 import { useEffect, useState} from "react";
-import { Link } from "react-router-dom"
 
 const ItemCount = (props) => { 
 
     let [ItemStock, setItemStock] = useState(0);
 
     let [count, setCount] = useState(0);
+
+    let [addToCart, setAddToCart] = useState(true)
 
     useEffect (() => {
         setItemStock(props.stock);
@@ -23,6 +24,19 @@ const ItemCount = (props) => {
         }
     }
 
+    const handleOnClick = () => {
+        
+        if (count===0) {
+            alert('Elegir un producto')
+        }
+
+        else {setAddToCart(false)
+            props.onAdd(count)
+        
+        }
+        
+    }
+
     return (
         <>
         <div className = 'SetCountContainer'>
@@ -32,7 +46,7 @@ const ItemCount = (props) => {
         </div>
         <div className = 'SetCountSubtitle'>Unidades seleccionadas <strong>{count}</strong></div>
         <div className = 'SetCountSubtitle'>Stock disponible <strong>{ItemStock-count}</strong></div>
-        <button onClick={()=> props.onAdd(count)}>Agregar al carrito</button>
+        {addToCart ? <button onClick={handleOnClick}>Agregar al carrito</button> : <div></div>}
         </div>
         </>
       )
