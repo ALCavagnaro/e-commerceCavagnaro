@@ -57,7 +57,7 @@ const CartState = ({children}) => {
         setTotal(0)
     }
 
-
+    
     return <CartContext.Provider value = {{
 
                         onAdd, 

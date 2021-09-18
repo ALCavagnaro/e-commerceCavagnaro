@@ -14,9 +14,48 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  position: fixed;
+  top:0;
+  margin: 0;
 }
 
-Button {
+.navBarbuttonContainer{
+  background-color: black;
+  opacity:1;
+}
+
+.buttonNavbar{
+
+  background-color: rgb(255, 255, 255);
+  padding: 0.2rem;
+  margin: 10px 5px;
+  color: rgb(17, 16, 16);
+  border: white solid 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  width:5rem;
+  height: 2rem;
+  font-size: 20px;
+
+}
+
+
+.addToCartButtonContainer {
+  width: 20rem;
+  height: 3.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.goToCartButtonContainer {
+  width: 15rem;
+  height: 3.5rem;
+  margin: auto;
+}
+
+button {
   background-color: black;
   padding: 0.2rem;
   margin:10px 5px;
@@ -25,7 +64,15 @@ Button {
   border-radius: 5px;
   cursor: pointer;
   width:100%;
+  height: 100%;
+  font-size: 20px;
 }
+
+.disabledButton{
+  background-color: grey;
+  cursor: auto;
+}
+
 .buttonContainer {
   display: flex;
   flex-direction: row;
@@ -43,11 +90,27 @@ Button {
   margin: auto;
 }
 
+.cartWidgetContainer{
+  display: flex;
+  flex-direction: row;
+  margin-left: 60rem;
+}
+
 .CarWidget, .Logo {
   width: 2.8rem; 
   height: 2.8rem; 
-  margin: auto 0 auto 50rem;
   cursor: pointer;
+  margin: 4px;
+}
+
+.cartQuantity {
+  color: white;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    background-color: coral;
+    padding: 1px 10px;
+    border-radius: 80px;
 }
 
 h1 {
@@ -83,11 +146,12 @@ h3 {
 }
 
 .SetCountContainer {  
-  margin: 5rem 5%;
+  margin: 2rem 5%;
   padding: auto;
   display: flex;
-  flex-direction: column; 
-}
+  flex-direction: column;
+  cursor: auto; 
+} 
 
 .SetCountButtonContainer{
   display: flex;
@@ -175,4 +239,15 @@ h3 {
     flex-wrap: wrap;
   }
 
+  .paymentContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width:20rem;
+  }
+
+  .paymentContainer > input {
+    margin: 5px;
+    height: 2rem;
+  }
   

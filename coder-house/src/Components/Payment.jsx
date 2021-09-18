@@ -6,7 +6,7 @@ let message = []
 
 const Payment = () => {
 
-    const {total, cart} = useContext(CartContext)
+    const {total, cart, clear} = useContext(CartContext)
 
     const [items, setItems] = useState([]);
 
@@ -28,8 +28,8 @@ const Payment = () => {
       let totalPrice = total;
       cart.forEach(item => {
         newOrder.items.push(item);
-        console.log(item)
-        totalPrice = totalPrice + item.price;
+        newOrder.items.push(totalPrice);
+        console.log(totalPrice)
       });
 
       newOrder['totalPrice'] = totalPrice;
@@ -41,6 +41,8 @@ const Payment = () => {
       console.log(message, message[0])
 
       setFinalMessage(true)
+
+      clear()
 }
 
 return (
@@ -49,7 +51,13 @@ return (
 
         {console.log(message)}
 
-        <h3>Total {total}</h3>
+        <div className = 'paymentContainer'>
+
+        <h3>Total de la compra <strong> $ {total}</strong></h3>
+
+        <input type = 'text' placeholder= 'Ingresar nombre y apellido'></input>
+        <input type = 'email' placeholder= 'Ingresar dirección de email'></input>
+        <input type = 'number' placeholder= 'Ingresar número de teléfono'></input>
      
         <button className = 'BuyButtonMain' onClick={()=>{finishPayment()}}>Finalizar compra</button>
          
@@ -58,6 +66,8 @@ return (
             <h3>{message[0]}, gracias por tu compra</h3>
             <h4>Fecha y horario: {message[1]}</h4>
         </div> : <></>}
+
+        </div>
     
 
     </>

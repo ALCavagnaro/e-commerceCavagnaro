@@ -6,21 +6,18 @@ import { Link } from "react-router-dom"
 const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = '' , stock = '', photo = ''}) => {
   
     const {onAdd} = useContext(CartContext)
-    
-    let [itemUnit, setItemUnit] = useState(0)
 
     let [goToCart, setGoToCart] = useState(false)
 
 
-    const add = (count) => {
-
-      setItemUnit(count)
+    const addCount = (count) => {
        
-      onAdd({id , name, price}, itemUnit)
+      onAdd({id , name, price}, count)
 
       setGoToCart(true)
       
     }
+
 
   return (
     <div className="card">
@@ -28,9 +25,9 @@ const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = ''
         <div className="name">{name}</div>
         <div className="price">{price}</div>
         <div>{description}</div>
-        <ItemCount stock={stock} onAdd={add}/>
-        <div className='buttonContainer'>
-        {goToCart ? <Link to="/Cart"><button onClick={()=>{add()}}>Ir al carrito</button></Link> : <div></div>}
+        <ItemCount stock={stock} onAdd={addCount}/>
+        <div className = 'goToCartButtonContainer'>
+            {goToCart ? <Link to="/Cart"><button>Ir al carrito</button></Link> : <button disabled={true} className = 'disabledButton'>Ir al carrito</button> }
         </div>
     </div>
   );

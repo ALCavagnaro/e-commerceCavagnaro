@@ -6,10 +6,12 @@ export default function Navbar() {
 
  return <>
    <div className = "NavBarContainer">
-   <Link to="/"><Button text = 'Inicio'/></Link>
-   <Link to="/Mujer"><Button text = 'Mujer'/></Link>
-   <Link to="/Hombre"><Button text = 'Hombre'/></Link>
-   <Link to="/Cart"><CarWidget className = 'CarWidget'/></Link>
+     <div className ='navBarbuttonContainer'>
+      <Link to="/"><button className = 'buttonNavbar'>Inicio</button></Link>
+      <Link to="/Mujer"><button className = 'buttonNavbar'>Mujer</button></Link>
+      <Link to="/Hombre"><button className = 'buttonNavbar'>Hombre</button></Link>
+     </div>
+     <Link to="/Cart"><CarWidget className = 'CarWidget'/></Link>
    </div>
  </>;
 
