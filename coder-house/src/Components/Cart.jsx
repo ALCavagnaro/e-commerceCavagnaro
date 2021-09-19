@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
 import {CartContext} from './Context/CacheProvider';
-import ItemCount from './ItemCount';
+//import ItemCount from './ItemCount';
 
 const Cart = () => {
 
@@ -42,12 +42,11 @@ const Cart = () => {
             </div>
 
                 <div className ='cartContainer'>
-
-                <h3>Total <strong>${total}</strong></h3>   
-
-                    <button className = 'BuyButtonMain' id='emptyCartBtn' onClick={() => clear()}>Vaciar carrito</button> 
-                    <Link to ='/Payment'><button className = 'BuyButtonMain' id='emptyCartBtn'>Comprar</button></Link> 
-                
+                    <h3>Total <strong>${total}</strong></h3>  
+                    <div className = 'cartSubContainer'> 
+                        <button className = 'BuyButtonMain' id='emptyCartBtn' onClick={() => clear()}>Vaciar carrito</button> 
+                        <Link to ='/Payment'><button className = 'BuyButtonMain' id='emptyCartBtn'>Comprar</button></Link> 
+                    </div>
                 </div>    
 
             </>

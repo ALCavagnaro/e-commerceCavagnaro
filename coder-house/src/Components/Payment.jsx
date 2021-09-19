@@ -2,25 +2,29 @@ import {React, useState, useContext} from 'react';
 import {addPaymentOrder} from '../../src/Firebase/Firebase.js';
 import {CartContext} from './Context/CacheProvider';
 
-let message = []
+let newOrder = []
+
+let buyerName = []
+
+let buyerPhone = []
+
+let buyerEmail = []
 
 const Payment = () => {
 
     const {total, cart, clear} = useContext(CartContext)
 
-    const [items, setItems] = useState([]);
-
-    console.log('items', items, 'cart', cart)
-
     const [finalMessage, setFinalMessage] = useState(false)
 
     const finishPayment = () => {
 
-    const newOrder = {
+     validation()
+
+     newOrder = {
         buyer: {
-          name: 'Ana Laura',
-          phone: '+54 9 9999-9999',
-          email: 'analauracavagnaro@gmail.com'
+          name:`${buyerName[buyerName.length-1]}`,
+          phone: `${buyerPhone[buyerPhone.length-1]}`,
+          email: `${buyerEmail[buyerEmail.length-1]}`,
         },
         items: [],
         date: new Date().toString()
@@ -29,52 +33,100 @@ const Payment = () => {
       cart.forEach(item => {
         newOrder.items.push(item);
         newOrder.items.push(totalPrice);
-        console.log(totalPrice)
       });
 
       newOrder['totalPrice'] = totalPrice;
-      message.push(newOrder.buyer.name)
-      message.push(newOrder.date)
-     
-  
-      addPaymentOrder('Órdenes', newOrder).then(res => console.log(res));
-      console.log(message, message[0])
+      
+      addPaymentOrder('Órdenes', newOrder);
 
-      setFinalMessage(true)
 
       clear()
+      
+    }
+
+    const handleSubmit = (event) => {
+
+      event.preventDefault()
+
+    }
+
+    const handleChangeName = (event) => {
+
+  console.log(event.target.value)
+  buyerName.push(event.target.value)
 }
 
-return (
+const handleChangePhone = (event) => {
 
-    <>  
+  console.log(event.target.value)
+  buyerPhone.push(event.target.value)
+}
 
-        {console.log(message)}
 
-        <div className = 'paymentContainer'>
+const handleChangeEmail = (event) => {
 
-        <h3>Total de la compra <strong> $ {total}</strong></h3>
+  console.log(event.target.value)
+  buyerEmail.push(event.target.value)
 
-        <input type = 'text' placeholder= 'Ingresar nombre y apellido'></input>
-        <input type = 'email' placeholder= 'Ingresar dirección de email'></input>
-        <input type = 'number' placeholder= 'Ingresar número de teléfono'></input>
-     
-        <button className = 'BuyButtonMain' onClick={()=>{finishPayment()}}>Finalizar compra</button>
-         
-        {finalMessage?  <div className ='card'>
-            <strong><h2>La operación ha sido exitosa</h2></strong>
-            <h3>{message[0]}, gracias por tu compra</h3>
-            <h4>Fecha y horario: {message[1]}</h4>
-        </div> : <></>}
+}
 
-        </div>
+const validation = () => {
+
+  console.log(buyerName.length)
+
+  if (
     
+    (buyerName.length === 0) || 
+    (buyerPhone.length === 0) || 
+    (buyerEmail.length === 0)
+    
+    )
 
-    </>
-)
+  {
+    console.log('Falta nombre')
+    alert('Llenar los campos del formulario')
+  }
+  
+
+  else {setFinalMessage(true)}
+
+  }
+
+
+    return (
+
+        <>  
+
+           { !finalMessage ? <form className = 'paymentContainer' onSubmit={handleSubmit}>
+
+              <h4>Ingresá los siguientes datos para finalizar tu compra</h4>
+              <input type = 'text' placeholder= 'Nombre y apellido' onChange={handleChangeName}/>
+              <input type = 'email' placeholder= 'Dirección de email'onChange={handleChangePhone}/>
+              <input type = 'number' placeholder= 'Número de teléfono'onChange={handleChangeEmail}/>
+
+              <h4>Total de la compra <strong> $ {total}</strong></h4>
+
+              <button className = 'BuyButtonMain' id = 'finishBuy' onClick={()=>{finishPayment()}}>Finalizar compra</button>
+            
+            </form> : <></>
+
+    }
+         
+            
+            {finalMessage?  <div className ='card'>
+                <strong><h2>{buyerName[buyerName.length-1]}, la operación ha sido exitosa</h2></strong>
+                <h2>¡Muchas gracias por tu compra!</h2>
+            </div> : <></>}
+
+            
+        
+
+        </>
+    )
 
 }
 
 
 
 export default Payment
+

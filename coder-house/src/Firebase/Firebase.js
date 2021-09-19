@@ -3,15 +3,12 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 import {
     collection,
-    setDoc,
     addDoc, 
     getDocs, 
     getDoc, 
     query, 
     where, 
     doc,
-    runTransaction,
-    writeBach
 } from "firebase/firestore";
  
 
@@ -51,7 +48,6 @@ export  const addPaymentOrder = (path, obj) => {
 
     const pathSegments = path.split('/');
     const ref = collection(db,...pathSegments);
-    console.log(path)
     return addDoc(ref, obj);    
 }
 
