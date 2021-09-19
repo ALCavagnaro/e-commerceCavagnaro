@@ -1,6 +1,7 @@
 import {React, useState, useContext} from 'react';
-import {addPaymentOrder} from '../../src/Firebase/Firebase.js';
-import {CartContext} from './Context/CacheProvider';
+import {addPaymentOrder} from '../../Firebase/Firebase.js';
+import {CartContext} from '../Context/CacheProvider';
+import Greetings from '../Greetings/Greetings';
 
 let newOrder = []
 
@@ -18,7 +19,17 @@ const Payment = () => {
 
     const finishPayment = () => {
 
-     validation()
+    const validation = () => {
+
+    if ((buyerName.length === 0) || 
+    (buyerPhone.length === 0) || 
+    (buyerEmail.length === 0)) {
+
+      console.log('Campos incompletos')
+      alert('Completar el formulario para terminar compra')
+    }
+
+    else {
 
      newOrder = {
         buyer: {
@@ -37,10 +48,17 @@ const Payment = () => {
 
       newOrder['totalPrice'] = totalPrice;
       
-      addPaymentOrder('Órdenes', newOrder);
+      addPaymentOrder('Órdenes', newOrder).then(res=>(console.log(res)));
 
 
       clear()
+
+      setFinalMessage(true)
+    }
+
+    }
+
+    validation()
       
     }
 
@@ -70,32 +88,12 @@ const handleChangeEmail = (event) => {
 
 }
 
-const validation = () => {
-
-  console.log(buyerName.length)
-
-  if (
     
-    (buyerName.length === 0) || 
-    (buyerPhone.length === 0) || 
-    (buyerEmail.length === 0)
-    
-    )
-
-  {
-    console.log('Falta nombre')
-    alert('Llenar los campos del formulario')
-  }
-  
-
-  else {setFinalMessage(true)}
-
-  }
-
-
-    return (
+  return (
 
         <>  
+
+           <Greetings greetings = 'Formulario de compra'/> 
 
            { !finalMessage ? <form className = 'paymentContainer' onSubmit={handleSubmit}>
 
@@ -104,10 +102,8 @@ const validation = () => {
               <input type = 'email' placeholder= 'Dirección de email'onChange={handleChangePhone}/>
               <input type = 'number' placeholder= 'Número de teléfono'onChange={handleChangeEmail}/>
 
-              <h4>Total de la compra <strong> $ {total}</strong></h4>
-
-              <button className = 'BuyButtonMain' id = 'finishBuy' onClick={()=>{finishPayment()}}>Finalizar compra</button>
-            
+              <h4>Total <strong> $ {total}</strong></h4>
+              <button className = 'BuyButtonMain' onClick={()=>{finishPayment()}}>Finalizar compra</button>
             </form> : <></>
 
     }

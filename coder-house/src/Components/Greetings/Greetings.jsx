@@ -1,7 +1,7 @@
 
 const Greetings = (props) => {
     return <> 
-      <h1>{props.greetings}</h1>
+      <h1 className = 'Greetings'>{props.greetings}</h1>
     </>
 }
 

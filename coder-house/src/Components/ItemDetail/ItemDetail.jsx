@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react'
-import {CartContext} from './Context/CacheProvider';
-import ItemCount from './ItemCount';
+import {CartContext} from '../Context/CacheProvider';
+import ItemCount from '../itemCount/ItemCount';
 import { Link } from "react-router-dom"
 
 const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = '' , stock = '', photo = ''}) => {

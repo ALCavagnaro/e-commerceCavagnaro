@@ -1,4 +1,4 @@
-import ItemList from './ItemList.jsx'
+import ItemList from '../ItemList/ItemList.jsx'
 
 const ItemListContainer=(props)=>{
 

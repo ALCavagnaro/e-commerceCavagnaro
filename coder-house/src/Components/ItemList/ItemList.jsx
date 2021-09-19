@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 //import data from './Data.js'
-import Item from './Item.jsx'
+import Item from '../Item/Item.jsx'
 import { useParams } from 'react-router-dom'
-import {completeItemList, itemCat} from '../../src/Firebase/Firebase.js'
+import {completeItemList, itemCat} from '../../Firebase/Firebase.js'
+import Greetings from '../Greetings/Greetings.jsx';
 
 const ItemList = () => {
 
@@ -55,6 +56,9 @@ const ItemList = () => {
      
     return(
         <>
+        
+        <Greetings greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
+
         { charge ? <h2>CARGANDO PRODUCTOS...</h2> : 
         products.map((product)=>
            <Item 

@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
-import {CartContext} from './Context/CacheProvider';
-//import ItemCount from './ItemCount';
+import {CartContext} from '../Context/CacheProvider';
+import Greetings from '../Greetings/Greetings.jsx';
 
 const Cart = () => {
 
@@ -9,7 +9,7 @@ const Cart = () => {
 
     if (cart.length === 0) return  <>
 
-    <h2>El carrito está vacío</h2>
+    <Greetings greetings = 'El carrito está vacío'/>
 
     </>
     else {

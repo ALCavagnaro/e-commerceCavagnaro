@@ -1,12 +1,11 @@
 import React from "react";
 import './App.css';
-import Navbar from './Components/Navbar';
-import Greetings from './Components/Greetings';
-import ItemListContainer from './Components/ItemListContainer';
-import ItemDetailContainer from './Components/ItemDetailContainer';
+import Navbar from './Components/Navbar/Navbar';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import {CartState} from './Components/Context/CacheProvider';
-import Cart from './Components/Cart';
-import Payment from './Components/Payment';
+import Cart from './Components/Cart/Cart';
+import Payment from './Components/Payment/Payment';
 
 import {
   BrowserRouter,
@@ -22,7 +21,6 @@ function App() {
       <>
       <CartState>
         <Navbar/>
-        <Greetings className = 'Greetings' greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
         <Switch>
             <Route path="/" exact>
               <ItemListContainer/>

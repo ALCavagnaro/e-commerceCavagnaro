@@ -1,6 +1,6 @@
 import {useContext} from 'react';
-import Logo from './Logo/carrito-de-compras.png';
-import {CartContext} from './Context/CacheProvider';
+import Logo from '../Logo/carrito-de-compras.png';
+import {CartContext} from '../Context/CacheProvider';
 
 function CarWidget (props) {
     
