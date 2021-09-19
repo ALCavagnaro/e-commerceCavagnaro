@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/e-commerceCavagnaro/static/css/main.efebdf5a.chunk.css",
+    "main.js": "/e-commerceCavagnaro/static/js/main.017634a7.chunk.js",
+    "main.js.map": "/e-commerceCavagnaro/static/js/main.017634a7.chunk.js.map",
+    "runtime-main.js": "/e-commerceCavagnaro/static/js/runtime-main.221d2e99.js",
+    "runtime-main.js.map": "/e-commerceCavagnaro/static/js/runtime-main.221d2e99.js.map",
+    "static/js/2.075fff8d.chunk.js": "/e-commerceCavagnaro/static/js/2.075fff8d.chunk.js",
+    "static/js/2.075fff8d.chunk.js.map": "/e-commerceCavagnaro/static/js/2.075fff8d.chunk.js.map",
+    "index.html": "/e-commerceCavagnaro/index.html",
+    "static/css/main.efebdf5a.chunk.css.map": "/e-commerceCavagnaro/static/css/main.efebdf5a.chunk.css.map",
+    "static/js/2.075fff8d.chunk.js.LICENSE.txt": "/e-commerceCavagnaro/static/js/2.075fff8d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.221d2e99.js",
+    "static/js/2.075fff8d.chunk.js",
+    "static/css/main.efebdf5a.chunk.css",
+    "static/js/main.017634a7.chunk.js"
+  ]
+}
