@@ -22,7 +22,7 @@ function App() {
       <CartState>
         <Navbar/>
         <Switch>
-            <Route path="/" exact>
+            <Route path="/e-commerceCavagnaro" exact>
               <ItemListContainer/>
             </Route>
             <Route path="/cart" exact>

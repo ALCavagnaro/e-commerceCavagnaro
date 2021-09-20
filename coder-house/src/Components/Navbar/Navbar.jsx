@@ -7,7 +7,7 @@ export default function Navbar() {
  return <>
    <div className = "NavBarContainer">
      <div className ='navBarbuttonContainer'>
-      <Link to="/"><Button className = 'buttonNavbar' text = 'Inicio'/></Link>
+      <Link to="/e-commerceCavagnaro"><Button className = 'buttonNavbar' text = 'Inicio'/></Link>
       <Link to="/Mujer"><Button className = 'buttonNavbar' text = 'Mujer'/></Link>
       <Link to="/Hombre"><Button className = 'buttonNavbar' text = 'Hombre'/></Link>
      </div>
