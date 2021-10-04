@@ -25,16 +25,16 @@ Para lanzar la aplicación en el localhost, escribir:
 ` npm start `
 
 
-Para abrir la aplicación derigirse a:
+Para abrir la aplicación dirigirse a:
 
 http://localhost:3000
 
 
-### Sobre mí: 
+## Sobre mí: 
 
 Soy traductora en inglés con experiencia en Real Estate. 
 
-### Contacto: 
+## Contacto: 
 
 Linkedin: https://www.linkedin.com/in/ana-laura-cavagnaro-aa52b155/  
 email: analauracavagnaro@gmail.com
