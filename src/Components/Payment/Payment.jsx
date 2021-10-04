@@ -1,6 +1,6 @@
 import {React, useState, useContext} from 'react';
 import {addPaymentOrder} from '../../Firebase/Firebase.js';
-import {CartContext} from '../Context/CacheProvider';
+import {CartContext} from '../Context/CartProvider';
 import Greetings from '../Greetings/Greetings';
 
 let newOrder = []

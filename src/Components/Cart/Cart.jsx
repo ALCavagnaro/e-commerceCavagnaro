@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
-import {CartContext} from '../Context/CacheProvider';
+import {CartContext} from '../Context/CartProvider';
 import Greetings from '../Greetings/Greetings.jsx';
 
 const Cart = () => {

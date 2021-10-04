@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react'
-import {CartContext} from '../Context/CacheProvider';
+import {CartContext} from '../Context/CartProvider';
 import ItemCount from '../itemCount/ItemCount';
 import { Link } from "react-router-dom"
 
