@@ -3,7 +3,7 @@
 
 ## Conceptos aplicados: 
 
-programación por componentes mediante Javascript, JS y ES6; utilización del flujos de datos; manejo de rutas utilizando Firebase; utilización del virtual DOM mediante los desarrollos de React JS. 
+Programación por componentes mediante Javascript, JS y ES6; utilización del flujos de datos; manejo de rutas utilizando Firebase; utilización del virtual DOM mediante los desarrollos de React JS. 
 
 
 ## Sobre mi proyecto: 
@@ -15,14 +15,14 @@ Se trata de una aplicación SPA para una tienda de ropa. La aplicación permite 
 Dirigirse al directorio del proyecto y escribir en la terminal el código siguiente para instalar las dependencias necesarias:
 
 
-`npm install `
+    npm install
     
 
 
 Para lanzar la aplicación en el localhost, escribir: 
 
 
-` npm start `
+    npm start
 
 
 Para abrir la aplicación dirigirse a:
