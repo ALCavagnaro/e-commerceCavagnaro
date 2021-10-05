@@ -103,7 +103,7 @@ const handleChangeEmail = (event) => {
               <input type = 'number' placeholder= 'Número de teléfono'onChange={handleChangeEmail}/>
 
               <h4>Total <strong> $ {total}</strong></h4>
-              <button className = 'BuyButtonMain' onClick={()=>{finishPayment()}}>Finalizar compra</button>
+              <button onClick={()=>{finishPayment()}}>Finalizar compra</button>
             </form> : <></>
 
     }

@@ -28,7 +28,7 @@ function App() {
             <Route path="/cart" exact>
               <Cart/>
             </Route>
-            <Route path="/Payment" exact>
+            <Route path="/payment" exact>
               <Payment/>
             </Route>
             <Route path="/:category/:id" exact>
