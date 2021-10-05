@@ -80,14 +80,6 @@ button {
   cursor: auto;
 }
 
-/*.buttonContainer {              
-  display: flex;
-  flex-direction: row;
-  width: 10rem;
-  align-items: center;
-  margin: auto;
-}*/
-
 .cart-container {
   display: flex;
   width:40%;
@@ -184,12 +176,6 @@ h3 {
 
 }
 
-/*.BuyButtonMain {
-  margin: 1% auto 1rem auto;              
-  width: 10rem;
-  height: 3rem;
-  font-size: large;
-}*/
 
 .photo{
   width: 100%;
