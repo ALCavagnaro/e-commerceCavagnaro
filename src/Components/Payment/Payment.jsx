@@ -95,7 +95,7 @@ const handleChangeEmail = (event) => {
 
            <Greetings greetings = 'Formulario de compra'/> 
 
-           { !finalMessage ? <form className = 'paymentContainer' onSubmit={handleSubmit}>
+           { !finalMessage ? <form className = 'pymt-container' onSubmit={handleSubmit}>
 
               <h4>Ingresá los siguientes datos para finalizar tu compra</h4>
               <input type = 'text' placeholder= 'Nombre y apellido' onChange={handleChangeName}/>

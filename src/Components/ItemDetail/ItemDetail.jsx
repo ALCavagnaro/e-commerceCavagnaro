@@ -21,13 +21,13 @@ const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = ''
 
   return (
     <div className="card">
-        <img className="Photo" src= {photo} alt={thumbnail}/>
+        <img className="photo" src= {photo} alt={thumbnail}/>
         <div className="name">{name}</div>
         <div className="price">{price}</div>
         <div>{description}</div>
         <ItemCount stock={stock} onAdd={addCount}/>
-        <div className = 'goToCartButtonContainer'>
-            {goToCart ? <Link to="/Cart"><button>Ir al carrito</button></Link> : <button disabled={true} className = 'disabledButton'>Ir al carrito</button> }
+        <div className = 'go-btn-container'>
+            {goToCart ? <Link to="/Cart"><button>Ir al carrito</button></Link> : <button disabled={true} className = 'disabled-btn'>Ir al carrito</button> }
         </div>
     </div>
   );

@@ -17,12 +17,12 @@ const Cart = () => {
         return(
 
             <>
-            <div className ='cartGallery'>   
+            <div className ='cart-gallery'>   
 
                 {cart.map((item, key) =>
                 
                 
-                    <div className='cartCard'>
+                    <div className='cart-card'>
                         <strong>{item.name}</strong>
                         <h3>Precio producto <strong>$ {item.price}</strong></h3>
                         <h3>Cantidad <strong>{item.quantity}</strong></h3>
@@ -41,9 +41,9 @@ const Cart = () => {
 
             </div>
 
-                <div className ='cartContainer'>
+                <div className ='cart-container'>
                     <h3>Total <strong>${total}</strong></h3>  
-                    <div className = 'cartSubContainer'> 
+                    <div className = 'cart-subcontainer'> 
                         <button className = 'BuyButtonMain' id='emptyCartBtn' onClick={() => clear()}>Vaciar carrito</button> 
                         <Link to ='/Payment'><button className = 'BuyButtonMain' id='emptyCartBtn'>Comprar</button></Link> 
                     </div>
