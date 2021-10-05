@@ -43,15 +43,15 @@ const ItemCount = (props) => {
 
     return (
         <>
-        <div className = 'SetCountContainer'>
-           <div className = 'SetCountButtonContainer'>
-              {addToCart ? <button className = 'SetCountButton' onClick={() => add()}>+</button> : <button disabled={true} className = 'SetCountButton disabledButton' onClick={() => add()}>+</button>}
-              {addToCart ? <button className = 'SetCountButton'onClick={() => sub()}>-</button> : <button disabled={true} className = 'SetCountButton disabledButton'onClick={() => sub()}>-</button>}
+        <div className = 'count-container'>
+           <div className = 'count-btn-container'>
+              {addToCart ? <button className = 'count-btn' onClick={() => add()}>+</button> : <button disabled={true} className = 'count-btn disabled-btn' onClick={() => add()}>+</button>}
+              {addToCart ? <button className = 'count-btn'onClick={() => sub()}>-</button> : <button disabled={true} className = 'count-btn disabled-btn'onClick={() => sub()}>-</button>}
            </div>
-           <div className = 'SetCountSubtitle'>Unidades seleccionadas <strong>{count}</strong></div>
-           <div className = 'SetCountSubtitle'>Stock disponible <strong>{ItemStock-count}</strong></div>
-        <div className = 'addToCartButtonContainer'>
-            {addToCart ? <button onClick={handleOnClick}>Agregar al carrito</button> : <button disabled={true} className = 'disabledButton' onClick={handleOnClick}>Agregar al carrito</button>}
+           <div className = 'count-subtitle'>Unidades seleccionadas <strong>{count}</strong></div>
+           <div className = 'count-subtitle'>Stock disponible <strong>{ItemStock-count}</strong></div>
+        <div className = 'add-btn-container'>
+            {addToCart ? <button onClick={handleOnClick}>Agregar al carrito</button> : <button disabled={true} className = 'disabled-btn' onClick={handleOnClick}>Agregar al carrito</button>}
         </div>
         </div>
         </>

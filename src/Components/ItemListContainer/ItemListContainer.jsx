@@ -4,7 +4,7 @@ const ItemListContainer=(props)=>{
 
     return(
         <>
-        <div className='PhotoGallery'>            
+        <div className='photo-gallery'>            
             <ItemList/>
         </div>
         </>

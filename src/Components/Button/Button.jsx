@@ -1,7 +1,7 @@
 function Button (props) { 
     return (
         <>
-          <button className = 'buttonNavbar'>{props.text}</button>
+          <button className = 'btn-nav'>{props.text}</button>
         </>
     )
 } 

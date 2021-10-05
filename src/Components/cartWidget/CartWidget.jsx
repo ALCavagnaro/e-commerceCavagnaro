@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 import Logo from '../Logo/carrito-de-compras.png';
-import {CartContext} from '../Context/CacheProvider';
+import {CartContext} from '../Context/CartProvider';
 
 function CarWidget (props) {
     
@@ -15,9 +15,9 @@ function CarWidget (props) {
     
     return (
         <>
-        <div className='cartWidgetContainer'>
+        <div className='cart-widget-container'>
            <img src={Logo} className = 'Logo' alt="Logo"/>
-           <h4 className = 'cartQuantity'>{totalQuantity}</h4>
+           <h4 className = 'cart-qty'>{totalQuantity}</h4>
         </div>
         </>
     )
