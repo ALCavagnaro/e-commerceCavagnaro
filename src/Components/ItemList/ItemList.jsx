@@ -9,7 +9,7 @@ const ItemList = () => {
 
   const { category } = useParams()
     const [products, setProducts] = useState([])
-    const [charge, setCargando] = useState(true)
+    const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
         if (category != null) {
@@ -27,7 +27,7 @@ const ItemList = () => {
                 })
                 
                  setProducts(itemsAux)
-                 setCargando(false)
+                 setLoading(false)
 
             })
         }
@@ -47,7 +47,7 @@ const ItemList = () => {
                 });
 
                 setProducts(itemsAux)
-                setCargando(false)
+                setLoading(false)
 
             })
 
@@ -59,7 +59,7 @@ const ItemList = () => {
         
         <Greetings greetings = "¡Sale Off! Aprovechá las últimas ofertas"/>
 
-        { charge ? <h2>CARGANDO PRODUCTOS...</h2> : 
+        { loading ? <h2>CARGANDO PRODUCTOS...</h2> : 
         products.map((product)=>
            <Item 
                 key={product.id} 
