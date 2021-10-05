@@ -8,10 +8,10 @@ export default function Navbar() {
    <div className = "nav-container">
      <div className ='nav-btn-container'>
       <Link to="/e-commerceCavagnaro"><Button className = 'btn-nav' text = 'Inicio'/></Link>
-      <Link to="/Mujer"><Button className = 'btn-nav' text = 'Mujer'/></Link>
-      <Link to="/Hombre"><Button className = 'btn-nav' text = 'Hombre'/></Link>
+      <Link to="/mujer"><Button className = 'btn-nav' text = 'Mujer'/></Link>
+      <Link to="/hombre"><Button className = 'btn-nav' text = 'Hombre'/></Link>
      </div>
-     <Link to="/Cart"><CarWidget className = 'cart-widget'/></Link>
+     <Link to="/cart"><CartWidget className = 'cart-widget'/></Link>
    </div>
  </>;
 

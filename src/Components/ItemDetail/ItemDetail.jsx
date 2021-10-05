@@ -27,7 +27,7 @@ const ItemDetail =  ({ id='',name = '', description='', price= 0, thumbnail = ''
         <div>{description}</div>
         <ItemCount stock={stock} onAdd={addCount}/>
         <div className = 'go-btn-container'>
-            {goToCart ? <Link to="/Cart"><button>Ir al carrito</button></Link> : <button disabled={true} className = 'disabled-btn'>Ir al carrito</button> }
+            {goToCart ? <Link to="/cart"><button>Ir al carrito</button></Link> : <button disabled={true} className = 'disabled-btn'>Ir al carrito</button> }
         </div>
     </div>
   );
