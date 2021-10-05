@@ -80,13 +80,13 @@ button {
   cursor: auto;
 }
 
-.buttonContainer {              /*REVISAR*/
+/*.buttonContainer {              
   display: flex;
   flex-direction: row;
   width: 10rem;
   align-items: center;
   margin: auto;
-}
+}*/
 
 .cart-container {
   display: flex;
@@ -184,12 +184,12 @@ h3 {
 
 }
 
-.BuyButtonMain {
-  margin: 1% auto 1rem auto;              /*REVISAR*/
+/*.BuyButtonMain {
+  margin: 1% auto 1rem auto;              
   width: 10rem;
   height: 3rem;
   font-size: large;
-}
+}*/
 
 .photo{
   width: 100%;
