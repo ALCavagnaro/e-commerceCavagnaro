@@ -7,7 +7,7 @@ import {itemId} from '../../Firebase/Firebase.js'
 const ItemDetailContainer = ()=>{
 
   const [product, setProduct] = useState([])
-  const [charge, setCharge] = useState(true)
+  const [loading, setLoading] = useState(true)
 
 
   const {id} = useParams()
@@ -20,14 +20,14 @@ useEffect(()=>{
             id:data.id, 
             ...data.data()
         })
-        setCharge(false)
+        setLoading(false)
     })
 },[id])
 
 
   return(
       <>
-      {charge?<h2>Cargando productos...</h2>:
+      {loading?<h2>Cargando productos...</h2>:
           <ItemDetail 
           key={product.id}
           id={product.id}
