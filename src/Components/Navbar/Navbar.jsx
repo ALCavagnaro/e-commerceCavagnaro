@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Button from "../Button/Button.jsx"
-import CarWidget from "../cartWidget/CartWidget.jsx"
+import CartWidget from "../cartWidget/CartWidget.jsx"
 
 export default function Navbar() {
 
