@@ -112,7 +112,7 @@ const Payment = () => {
               {
               
                 finalMessage?  <div className ='card'>
-                    <strong><h2>{buyerName[buyerName.length-1]}, la operación ha sido exitosa</h2></strong>
+                    <strong><h2>La operación ha sido exitosa</h2></strong>
                     <h2>¡Muchas gracias por tu compra!</h2>
                 </div> : <></>
               
