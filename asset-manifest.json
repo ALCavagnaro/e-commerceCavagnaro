@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/e-commerceCavagnaro/static/css/main.dc5cecbb.chunk.css",
-    "main.js": "/e-commerceCavagnaro/static/js/main.3db3f766.chunk.js",
-    "main.js.map": "/e-commerceCavagnaro/static/js/main.3db3f766.chunk.js.map",
+    "main.js": "/e-commerceCavagnaro/static/js/main.bbafac73.chunk.js",
+    "main.js.map": "/e-commerceCavagnaro/static/js/main.bbafac73.chunk.js.map",
     "runtime-main.js": "/e-commerceCavagnaro/static/js/runtime-main.221d2e99.js",
     "runtime-main.js.map": "/e-commerceCavagnaro/static/js/runtime-main.221d2e99.js.map",
     "static/js/2.9beff546.chunk.js": "/e-commerceCavagnaro/static/js/2.9beff546.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.221d2e99.js",
     "static/js/2.9beff546.chunk.js",
     "static/css/main.dc5cecbb.chunk.css",
-    "static/js/main.3db3f766.chunk.js"
+    "static/js/main.bbafac73.chunk.js"
   ]
 }
