@@ -27,7 +27,7 @@ const Cart = () => {
                         <h3>Precio producto <strong>$ {item.price}</strong></h3>
                         <h3>Cantidad <strong>{item.quantity}</strong></h3>
                         <h3>Subtotal ítem <strong>$ {item.subtotal}</strong></h3>
-                        <button onClick={()=>remove(
+                        <button className = 'buy-btn'onClick={()=>remove(
                             
                             item.id, 
                             item.price, 
@@ -44,8 +44,8 @@ const Cart = () => {
                 <div className ='cart-container'>
                     <h3>Total <strong>${total}</strong></h3>  
                     <div className = 'cart-subcontainer'> 
-                        <button onClick={() => clear()}>Vaciar carrito</button> 
-                        <Link to ='/payment'><button>Comprar</button></Link> 
+                        <button className = 'buy-btn' onClick={() => clear()}>Vaciar carrito</button> 
+                        <Link to ='/payment'><button className = 'buy-btn'>Comprar</button></Link> 
                     </div>
                 </div>    
 
