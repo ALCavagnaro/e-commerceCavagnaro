@@ -260,3 +260,17 @@ h3 {
     margin: 23px auto;
   }
   
+  .btn-container {              
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    align-items: center;
+    margin: auto;
+  }
+
+  .buy-btn {
+  margin: 1% auto 1rem auto;              
+  width: 10rem;
+  height: 3rem;
+  font-size: large;
+}
