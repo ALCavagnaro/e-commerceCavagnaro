@@ -3,15 +3,16 @@ import {addPaymentOrder} from '../../Firebase/Firebase.js';
 import {CartContext} from '../Context/CartProvider';
 import Greetings from '../Greetings/Greetings';
 
-let newOrder = []
-
-let buyerName = []
-
-let buyerPhone = []
-
-let buyerEmail = []
 
 const Payment = () => {
+
+    let newOrder = []
+
+    let buyerName = []
+
+    let buyerPhone = []
+
+    let buyerEmail = []
 
     const {total, cart, clear} = useContext(CartContext)
 
