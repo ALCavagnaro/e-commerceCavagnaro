@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
-import {CartState} from './Components/Context/CacheProvider';
+import {CartState} from './Components/Context/CartProvider';
 import Cart from './Components/Cart/Cart';
 import Payment from './Components/Payment/Payment';
 
