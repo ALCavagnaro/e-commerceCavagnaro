@@ -15,7 +15,7 @@ function CarWidget (props) {
     return (
         <>
         <div className='cart-widget-container'>
-           <img src={'/e-commerceCavagnaro/carrito.png'} className = 'Logo' alt="Logo"/>
+           <img src={'process.env.PUBLIC_URL/e-commerceCavagnaro/carrito.png'} className = 'Logo' alt="Logo"/>
            <h4 className = 'cart-qty'>{totalQuantity}</h4>
         </div>
         </>
