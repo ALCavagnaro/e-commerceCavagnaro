@@ -32,7 +32,7 @@ http://localhost:3000
 
 ## Sobre mí: 
 
-Soy traductora en inglés con experiencia en Real Estate. 
+Soy Traductora en inglés y estoy incursionando en programación. Tengo conocimientos básicos en CSS, Javascript y Python, que adquirí mediante cursos on-line y el desarrollo de proyectos personales, como este. Otros de mis intereses son la escritura y el dibujo. Hace más de siete años que trabajo realizando tareas administrativas en una empresa de Real Estate. 
 
 ## Contacto: 
 
